@@ -61,5 +61,11 @@ describe Calculator do
     Calculator.new("(32) + 4").result.must_equal 36
     Calculator.new("(21 + (7)) / 2").result.must_equal 14
   end
+   it "performs operations on negative numbers" do
+     Calculator.new("10 + -2").result.must_equal 8
+     Calculator.new("-5 - -5").result.must_equal 0
+     Calculator.new("-2 * 2 * -2").result.must_equal 8
+     Calculator.new("(-5 + -5) / 10").result.must_equal -1
+   end
   
 end
